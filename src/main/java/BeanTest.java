@@ -2,6 +2,8 @@ import models.Album;
 import models.Author;
 import models.Quote;
 
+import java.util.ArrayList;
+
 public class BeanTest {
 
     public static void main(String[] args) {
@@ -46,6 +48,14 @@ public class BeanTest {
 
         System.out.println("Quote 1 is: " + quote1.getContent() + ". Attributed to: " + quote1.getAuthor().getFirstName() + " " + quote1.getAuthor().getLastName());
         System.out.println("Quote 2 is: " + quote2.getContent() + ". Attributed to: " + quote2.getAuthor().getFirstName() + " " + quote2.getAuthor().getLastName());
+
+        ArrayList<Quote> quotes = new ArrayList<>();
+        quotes.add(quote1);
+        quotes.add(quote2);
+
+        for (Quote quote : quotes) {
+            System.out.println(quote.getContent() + " is a quote by " + quote.getAuthor().getFirstName() + " " + quote.getAuthor().getLastName());
+        }
     }
 
 }
