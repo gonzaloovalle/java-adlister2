@@ -6,6 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
   <nav>
-    <h2>Login</h2>
+    <h2></h2>
   </nav>
 

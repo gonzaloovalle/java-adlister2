@@ -9,11 +9,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%
-    if (request.getMethod().equals("post")) {
+    if (request.getMethod().equalsIgnoreCase("post")) {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         if (username.equals("admin") && password.equals("password")) {
-            response.sendRedirect("/profile");
+            response.sendRedirect("/profile.jsp");
         }
     }
 %>
@@ -26,6 +26,7 @@
         <input type="text" id="username" name="username">
         <label for="password">Password</label>
         <input type="text" id="password" name="password">
+        <input type="submit" value="Login">
     </form>
 </body>
 </html>
